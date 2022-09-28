@@ -40,5 +40,6 @@ Public Class sale
                 conn.Close()
             End If
         Next
+        DataGridViewSale.Rows.Clear()
     End Sub
 End Class
