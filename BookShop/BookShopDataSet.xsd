@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="BookShopDataSet" targetNamespace="http://tempuri.org/BookShopDataSet.xsd" xmlns:mstns="http://tempuri.org/BookShopDataSet.xsd" xmlns="http://tempuri.org/BookShopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="BookshopDataSet" targetNamespace="http://tempuri.org/BookshopDataSet.xsd" xmlns:mstns="http://tempuri.org/BookshopDataSet.xsd" xmlns="http://tempuri.org/BookshopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BookShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BookShopConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BookShop.My.MySettings.GlobalReference.Default.BookShopConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BookshopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BookshopConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BookShop.My.MySettings.GlobalReference.Default.BookshopConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BookTableAdapter" GeneratorDataComponentClassName="BookTableAdapter" Name="Book" UserDataComponentName="BookTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BookShopConnectionString (MySettings)" DbObjectName="BookShop.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BookshopConnectionString1 (MySettings)" DbObjectName="Bookshop.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Book] ([book_id], [book_name], [book_price], [book_amount]) VALUES (@book_id, @book_name, @book_price, @book_amount)</CommandText>
@@ -37,9 +37,39 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Book_tableTableAdapter" GeneratorDataComponentClassName="Book_tableTableAdapter" Name="Book_table" UserDataComponentName="Book_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BookshopConnectionString1 (MySettings)" DbObjectName="Bookshop.dbo.Book_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Book_table] ([book_id], [book_name], [book_price], [book_amount]) VALUES (@book_id, @book_name, @book_price, @book_amount)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@book_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="book_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@book_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="book_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@book_price" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="book_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@book_amount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="book_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT book_id, book_name, book_price, book_amount FROM dbo.Book_table</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="book_id" DataSetColumn="book_id" />
+              <Mapping SourceColumn="book_name" DataSetColumn="book_name" />
+              <Mapping SourceColumn="book_price" DataSetColumn="book_price" />
+              <Mapping SourceColumn="book_amount" DataSetColumn="book_amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerTableAdapter" GeneratorDataComponentClassName="CustomerTableAdapter" Name="Customer" UserDataComponentName="CustomerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BookShopConnectionString (MySettings)" DbObjectName="BookShop.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BookshopConnectionString1 (MySettings)" DbObjectName="Bookshop.dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Customer] ([cus_id], [cus_name], [cus_lastname], [cus_username], [cus_pwd]) VALUES (@cus_id, @cus_name, @cus_lastname, @cus_username, @cus_pwd)</CommandText>
@@ -69,12 +99,75 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Employee_tableTableAdapter" GeneratorDataComponentClassName="Employee_tableTableAdapter" Name="Employee_table" UserDataComponentName="Employee_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BookshopConnectionString1 (MySettings)" DbObjectName="Bookshop.dbo.Employee_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Employee_table] WHERE (([emp_id] = @Original_emp_id) AND ([emp_name] = @Original_emp_name) AND ([emp_surname] = @Original_emp_surname) AND ([emp_username] = @Original_emp_username) AND ([emp_password] = @Original_emp_password))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_emp_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="emp_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_username" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Employee_table] ([emp_id], [emp_name], [emp_surname], [emp_username], [emp_password]) VALUES (@emp_id, @emp_name, @emp_surname, @emp_username, @emp_password);
+SELECT emp_id, emp_name, emp_surname, emp_username, emp_password FROM Employee_table WHERE (emp_id = @emp_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@emp_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="emp_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_username" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT emp_id, emp_name, emp_surname, emp_username, emp_password FROM dbo.Employee_table</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Employee_table] SET [emp_id] = @emp_id, [emp_name] = @emp_name, [emp_surname] = @emp_surname, [emp_username] = @emp_username, [emp_password] = @emp_password WHERE (([emp_id] = @Original_emp_id) AND ([emp_name] = @Original_emp_name) AND ([emp_surname] = @Original_emp_surname) AND ([emp_username] = @Original_emp_username) AND ([emp_password] = @Original_emp_password));
+SELECT emp_id, emp_name, emp_surname, emp_username, emp_password FROM Employee_table WHERE (emp_id = @emp_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@emp_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="emp_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_username" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@emp_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_emp_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="emp_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_username" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_emp_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="emp_password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="emp_id" DataSetColumn="emp_id" />
+              <Mapping SourceColumn="emp_name" DataSetColumn="emp_name" />
+              <Mapping SourceColumn="emp_surname" DataSetColumn="emp_surname" />
+              <Mapping SourceColumn="emp_username" DataSetColumn="emp_username" />
+              <Mapping SourceColumn="emp_password" DataSetColumn="emp_password" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BookShopDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BookShopDataSet" msprop:Generator_DataSetName="BookShopDataSet">
+  <xs:element name="BookshopDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BookshopDataSet" msprop:Generator_DataSetName="BookshopDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Book" msprop:Generator_RowEvHandlerName="BookRowChangeEventHandler" msprop:Generator_RowDeletedName="BookRowDeleted" msprop:Generator_RowDeletingName="BookRowDeleting" msprop:Generator_RowEvArgName="BookRowChangeEvent" msprop:Generator_TablePropName="Book" msprop:Generator_RowChangedName="BookRowChanged" msprop:Generator_RowChangingName="BookRowChanging" msprop:Generator_TableClassName="BookDataTable" msprop:Generator_RowClassName="BookRow" msprop:Generator_TableVarName="tableBook" msprop:Generator_UserTableName="Book">
@@ -89,6 +182,22 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="book_price" msprop:Generator_ColumnPropNameInRow="book_price" msprop:Generator_ColumnPropNameInTable="book_priceColumn" msprop:Generator_ColumnVarNameInTable="columnbook_price" msprop:Generator_UserColumnName="book_price" type="xs:int" />
+              <xs:element name="book_amount" msprop:Generator_ColumnPropNameInRow="book_amount" msprop:Generator_ColumnPropNameInTable="book_amountColumn" msprop:Generator_ColumnVarNameInTable="columnbook_amount" msprop:Generator_UserColumnName="book_amount" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Book_table" msprop:Generator_RowEvHandlerName="Book_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="Book_tableRowDeleted" msprop:Generator_RowDeletingName="Book_tableRowDeleting" msprop:Generator_RowEvArgName="Book_tableRowChangeEvent" msprop:Generator_TablePropName="Book_table" msprop:Generator_RowChangedName="Book_tableRowChanged" msprop:Generator_RowChangingName="Book_tableRowChanging" msprop:Generator_TableClassName="Book_tableDataTable" msprop:Generator_RowClassName="Book_tableRow" msprop:Generator_TableVarName="tableBook_table" msprop:Generator_UserTableName="Book_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="book_id" msprop:Generator_ColumnPropNameInRow="book_id" msprop:Generator_ColumnPropNameInTable="book_idColumn" msprop:Generator_ColumnVarNameInTable="columnbook_id" msprop:Generator_UserColumnName="book_id" type="xs:int" />
+              <xs:element name="book_name" msprop:Generator_ColumnPropNameInRow="book_name" msprop:Generator_ColumnPropNameInTable="book_nameColumn" msprop:Generator_ColumnVarNameInTable="columnbook_name" msprop:Generator_UserColumnName="book_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="book_price" msprop:Generator_ColumnPropNameInRow="book_price" msprop:Generator_ColumnPropNameInTable="book_priceColumn" msprop:Generator_ColumnVarNameInTable="columnbook_price" msprop:Generator_UserColumnName="book_price" type="xs:double" />
               <xs:element name="book_amount" msprop:Generator_ColumnPropNameInRow="book_amount" msprop:Generator_ColumnPropNameInTable="book_amountColumn" msprop:Generator_ColumnVarNameInTable="columnbook_amount" msprop:Generator_UserColumnName="book_amount" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
@@ -128,7 +237,46 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Employee_table" msprop:Generator_RowEvHandlerName="Employee_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="Employee_tableRowDeleted" msprop:Generator_RowDeletingName="Employee_tableRowDeleting" msprop:Generator_RowEvArgName="Employee_tableRowChangeEvent" msprop:Generator_TablePropName="Employee_table" msprop:Generator_RowChangedName="Employee_tableRowChanged" msprop:Generator_RowChangingName="Employee_tableRowChanging" msprop:Generator_TableClassName="Employee_tableDataTable" msprop:Generator_RowClassName="Employee_tableRow" msprop:Generator_TableVarName="tableEmployee_table" msprop:Generator_UserTableName="Employee_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="emp_id" msprop:Generator_ColumnPropNameInRow="emp_id" msprop:Generator_ColumnPropNameInTable="emp_idColumn" msprop:Generator_ColumnVarNameInTable="columnemp_id" msprop:Generator_UserColumnName="emp_id" type="xs:int" />
+              <xs:element name="emp_name" msprop:Generator_ColumnPropNameInRow="emp_name" msprop:Generator_ColumnPropNameInTable="emp_nameColumn" msprop:Generator_ColumnVarNameInTable="columnemp_name" msprop:Generator_UserColumnName="emp_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="emp_surname" msprop:Generator_ColumnPropNameInRow="emp_surname" msprop:Generator_ColumnPropNameInTable="emp_surnameColumn" msprop:Generator_ColumnVarNameInTable="columnemp_surname" msprop:Generator_UserColumnName="emp_surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="emp_username" msprop:Generator_ColumnPropNameInRow="emp_username" msprop:Generator_ColumnPropNameInTable="emp_usernameColumn" msprop:Generator_ColumnVarNameInTable="columnemp_username" msprop:Generator_UserColumnName="emp_username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="emp_password" msprop:Generator_ColumnPropNameInRow="emp_password" msprop:Generator_ColumnPropNameInTable="emp_passwordColumn" msprop:Generator_ColumnVarNameInTable="columnemp_password" msprop:Generator_UserColumnName="emp_password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Employee_table" />
+      <xs:field xpath="mstns:emp_id" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

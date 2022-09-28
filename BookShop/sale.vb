@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class sale
     Private Sub tb_add_Click(sender As Object, e As EventArgs) Handles tb_add.Click
-        Dim conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-7B686JL\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True")
+        Dim conn As SqlConnection = New SqlConnection("Data Source=344_06\SQLEXPRESS;Initial Catalog=Bookshop;Integrated Security=True")
         Dim cmd As SqlCommand = New SqlCommand("select * from Book where book_id = '" & tb_id.Text & "'", conn)
         Dim adap As SqlDataAdapter = New SqlDataAdapter(cmd)
         Dim dt As DataTable = New DataTable()
@@ -24,21 +24,20 @@ Public Class sale
         la_change.Text = tb_cash.Text - tb_total.Text
     End Sub
 
-    Private Sub bt_buy_Click(sender As Object, e As EventArgs) Handles bt_buy.Click
+    Private Sub bt_buy_Click(sender As Object, e As EventArgs) Handles bt_sale.Click
         For Each dataRow As DataGridViewRow In DataGridViewSale.Rows
-            Dim conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-7B686JL\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True")
+            Dim conn As SqlConnection = New SqlConnection("Data Source=344_06\SQLEXPRESS;Initial Catalog=Bookshop;Integrated Security=True")
             Dim cmd As SqlCommand = New SqlCommand("select * from Book where book_id = '" & dataRow.Cells("Book_id").Value & "'", conn)
             Dim adap As SqlDataAdapter = New SqlDataAdapter(cmd)
             Dim dt As DataTable = New DataTable()
             adap.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                Dim conn2 As SqlConnection = New SqlConnection("Data Source=DESKTOP-7B686JL\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True")
-                Dim cmd2 As SqlCommand = New SqlCommand("update Book set book_amount = '" & dt.Rows(0).Item("Book_Amount") - dataRow.Cells("Book_Amount").Value & "' WHERE book_id  = '" & dataRow.Cells("Book_id") & "'", conn2)
-                conn2.Open()
+            If dt.Rows.Count = 1 Then
+                conn.Open()
+                Dim cmd2 As SqlCommand = New SqlCommand("update Book set book_amount = '" & dt.Rows(0).Item("Book_Amount") - dataRow.Cells("Book_Amount").Value & "' WHERE book_id  = '" & dt.Rows(0).Item("Book_id") & "'", conn)
                 If cmd2.ExecuteNonQuery() Then
-                    MessageBox.Show("Sale SUCCESS")
+                    MsgBox("Sale SUCCESS", MsgBoxStyle.Information)
                 End If
-                conn2.Close()
+                conn.Close()
             End If
         Next
     End Sub

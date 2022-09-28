@@ -24,12 +24,12 @@ Partial Class main
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(main))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,42 +42,48 @@ Partial Class main
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'SaleToolStripMenuItem
-        '
-        Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.SaleToolStripMenuItem.Text = "Sale"
-        '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Image = Global.BookShop.My.Resources.Resources.file
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(28, 20)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.FileToolStripMenuItem.Text = "File"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
+        Me.ExitToolStripMenuItem.Image = CType(resources.GetObject("ExitToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'CustomerToolStripMenuItem
         '
         Me.CustomerToolStripMenuItem.Image = Global.BookShop.My.Resources.Resources.customer
         Me.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem"
-        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(28, 20)
+        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.CustomerToolStripMenuItem.Text = "Customer"
         '
         'BookToolStripMenuItem
         '
         Me.BookToolStripMenuItem.Image = Global.BookShop.My.Resources.Resources.book_
         Me.BookToolStripMenuItem.Name = "BookToolStripMenuItem"
-        Me.BookToolStripMenuItem.Size = New System.Drawing.Size(28, 20)
+        Me.BookToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.BookToolStripMenuItem.Text = "Book"
+        '
+        'SaleToolStripMenuItem
+        '
+        Me.SaleToolStripMenuItem.Image = CType(resources.GetObject("SaleToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'main
         '

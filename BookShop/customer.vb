@@ -15,7 +15,7 @@ Public Class customer
     End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles delete.Click
-        Dim conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-7B686JL\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True")
+        Dim conn As SqlConnection = New SqlConnection("Data Source=344_06\SQLEXPRESS;Initial Catalog=Bookshop;Integrated Security=True")
         Dim cmd As SqlCommand = New SqlCommand("delete from Customer where cus_id = '" & Cus_idTextBox.Text & "'", conn)
         conn.Open()
         If cmd.ExecuteNonQuery() Then
@@ -26,7 +26,7 @@ Public Class customer
     End Sub
 
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
-        Dim conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-7B686JL\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True")
+        Dim conn As SqlConnection = New SqlConnection("Data Source=344_06\SQLEXPRESS;Initial Catalog=Bookshop;Integrated Security=True")
         Dim cmd As SqlCommand = New SqlCommand("update customer set cus_name=@name, cus_lastname=@lastname, cus_username=@username, cus_pwd=@pwd WHERE cus_id=@id", conn)
         cmd.Parameters.AddWithValue("name", Cus_nameTextBox.Text)
         cmd.Parameters.AddWithValue("lastname", Cus_lastnameTextBox.Text)

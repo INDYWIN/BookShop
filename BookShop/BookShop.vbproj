@@ -79,10 +79,10 @@
     <Compile Include="book.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookShopDataSet.Designer.vb">
+    <Compile Include="BookshopDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+      <DependentUpon>BookshopDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="customer.Designer.vb">
       <DependentUpon>customer.vb</DependentUpon>
@@ -149,16 +149,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BookShopDataSet.xsc">
-      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    <None Include="BookshopDataSet.xsc">
+      <DependentUpon>BookshopDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BookShopDataSet.xsd">
+    <None Include="BookshopDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookShopDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>BookshopDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BookShopDataSet.xss">
-      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    <None Include="BookshopDataSet.xss">
+      <DependentUpon>BookshopDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

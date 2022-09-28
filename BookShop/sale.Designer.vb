@@ -39,7 +39,7 @@ Partial Class sale
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.la_change = New System.Windows.Forms.Label()
-        Me.bt_buy = New System.Windows.Forms.Button()
+        Me.bt_sale = New System.Windows.Forms.Button()
         CType(Me.DataGridViewSale, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -176,28 +176,29 @@ Partial Class sale
         'la_change
         '
         Me.la_change.AutoSize = True
+        Me.la_change.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.la_change.Location = New System.Drawing.Point(261, 281)
         Me.la_change.Name = "la_change"
-        Me.la_change.Size = New System.Drawing.Size(34, 13)
+        Me.la_change.Size = New System.Drawing.Size(53, 18)
         Me.la_change.TabIndex = 11
         Me.la_change.Text = "........."
         '
-        'bt_buy
+        'bt_sale
         '
-        Me.bt_buy.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bt_buy.Location = New System.Drawing.Point(725, 303)
-        Me.bt_buy.Name = "bt_buy"
-        Me.bt_buy.Size = New System.Drawing.Size(47, 23)
-        Me.bt_buy.TabIndex = 12
-        Me.bt_buy.Text = "BUY"
-        Me.bt_buy.UseVisualStyleBackColor = True
+        Me.bt_sale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bt_sale.Location = New System.Drawing.Point(725, 303)
+        Me.bt_sale.Name = "bt_sale"
+        Me.bt_sale.Size = New System.Drawing.Size(47, 23)
+        Me.bt_sale.TabIndex = 12
+        Me.bt_sale.Text = "Sale"
+        Me.bt_sale.UseVisualStyleBackColor = True
         '
         'sale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 441)
-        Me.Controls.Add(Me.bt_buy)
+        Me.Controls.Add(Me.bt_sale)
         Me.Controls.Add(Me.la_change)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tb_cash)
@@ -235,5 +236,5 @@ Partial Class sale
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents la_change As Label
-    Friend WithEvents bt_buy As Button
+    Friend WithEvents bt_sale As Button
 End Class

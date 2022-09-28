@@ -26,4 +26,5 @@
         sale.Dock = DockStyle.Fill
         sale.Show()
     End Sub
+
 End Class
